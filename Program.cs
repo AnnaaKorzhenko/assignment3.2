@@ -1,6 +1,7 @@
 ﻿var my_Dict = new StringsDictionary();
+var path = "dictionary.txt";
 
-var allData = File.ReadAllLines("\"../../../../LL/dictionary.txt\"");
+var allData = File.ReadAllLines(path);
 my_Dict.Add(new KeyValuePair("k1", "v1"));
 my_Dict.Add(new KeyValuePair("k2", "v2"));
 my_Dict.Add(new KeyValuePair("k3", "v3"));

@@ -12,3 +12,4 @@ C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\refint\Assignment3.2.
 C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.pdb
 C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.genruntimeconfig.cache
 C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\ref\Assignment3.2.dll
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.sourcelink.json
