@@ -1,0 +1,14 @@
+C:\!uni\algorithms\projects\Assignment3.2\bin\Debug\net8.0\Assignment3.2.exe
+C:\!uni\algorithms\projects\Assignment3.2\bin\Debug\net8.0\Assignment3.2.deps.json
+C:\!uni\algorithms\projects\Assignment3.2\bin\Debug\net8.0\Assignment3.2.runtimeconfig.json
+C:\!uni\algorithms\projects\Assignment3.2\bin\Debug\net8.0\Assignment3.2.dll
+C:\!uni\algorithms\projects\Assignment3.2\bin\Debug\net8.0\Assignment3.2.pdb
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.AssemblyInfoInputs.cache
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.AssemblyInfo.cs
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.csproj.CoreCompileInputs.cache
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.dll
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\refint\Assignment3.2.dll
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.pdb
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\Assignment3.2.genruntimeconfig.cache
+C:\!uni\algorithms\projects\Assignment3.2\obj\Debug\net8.0\ref\Assignment3.2.dll
