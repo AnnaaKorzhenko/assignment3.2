@@ -21,14 +21,20 @@ class Node {
 }
 
 
-class LinkedList
+class LinkedList 
 {
     private Node first = null;
+
+    public Node GetFirst()
+    {
+        return first;
+    }
+
     public void Add(KeyValuePair data)
     {
         if (first == null)
         {
-            first = new Node(data, null);
+            first = new Node(data ,null);
         }
         else
         {
@@ -37,7 +43,7 @@ class LinkedList
             {
                 curElement = curElement.Next;
             }
-            curElement.Next = new Node(data, null);
+            curElement.Next = new Node(data,null);
         }
     }
 
@@ -66,12 +72,17 @@ class LinkedList
     public string Get(string key)
     {
         var curElement = first;
-        while (curElement.Data.Key != key)
+        
+        while (curElement.Data.Key != null)
         {
+            if (curElement.Data.Key == key)
+            {
+                return curElement.Data.Value;
+            }
             curElement = curElement.Next;
         }
 
-        return curElement.Data.Value;
+        return null;
     }
 
     public void Print()
@@ -92,43 +103,68 @@ class LinkedList
 public class StringsDictionary
 {
     private const int InitialSize = 10;
+    private const float LoadFactor = 0.75f;
     private LinkedList[] _buckets = new LinkedList[InitialSize];
+    private int _count = 0;
+    private int CurrentSize = InitialSize;
 
     public StringsDictionary()
     {
         for (var i = 0; i < InitialSize; ++i)
         {
             _buckets[i] = new LinkedList();
+
         }
     }
+
     public void Add(KeyValuePair pair)
     {
         var hash = CalculateHash(pair.Key);
+        if (_buckets[hash] == null)
+        {
+            _buckets[hash] = new LinkedList();
+        }
+
         _buckets[hash].Add(pair);
+        _count++;
+
+        var bucketsfullness = (float)_count / CurrentSize;
+
+        if (bucketsfullness > LoadFactor)
+        {
+            ResizeBuckets();
+        }
     }
 
     public void Remove(string key)
     {
-        var hash = CalculateHash(key);
+        var hash = CalculateHash(key) ;
         _buckets[hash].Remove(key);
     }
 
     public string Get(string key)
     {
         var hash = CalculateHash(key);
-        var value =_buckets[hash].Get(key);
-        return value;
+        if (_buckets[hash] != null)
+        {
+            var value = _buckets[hash].Get(key);
+
+            return value;
+        }
+
+        return null;
     }
 
 
     private int CalculateHash(string key)
     {
-        var hash = 0; 
+        var hash = 0;
         foreach (var c in key)
         {
             hash += c;
         }
-        return hash % InitialSize;
+
+        return hash % CurrentSize;
     }
 
     public void Print()
@@ -139,5 +175,33 @@ public class StringsDictionary
             Console.WriteLine("\n====================================");
         }
     }
-}
 
+    private void ResizeBuckets()
+    {
+        CurrentSize *= 2;
+        var newBuckets = new LinkedList[CurrentSize];
+        int newCount = 0;
+        for (int i = 0; i < _buckets.Length; i++)
+        {
+            LinkedList bucket = _buckets[i];
+            if (bucket != null)
+            {
+                Node curElement = bucket.GetFirst();
+                while (curElement != null)
+                {
+                    int newHash = CalculateHash(curElement.Data.Key);
+                    if (newBuckets[newHash] == null)
+                    {
+                        newBuckets[newHash] = new LinkedList();
+                    }
+
+                    newBuckets[newHash].Add(curElement.Data);
+                    curElement = curElement.Next;
+                    newCount++;
+                }
+            }
+        }
+        _buckets = newBuckets;
+        _count = newCount;
+    }
+}
