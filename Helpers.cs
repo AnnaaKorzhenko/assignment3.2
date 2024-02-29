@@ -40,11 +40,38 @@ class LinkedList
             curElement.Next = new Node(data, null);
         }
     }
-    void Remove(KeyValuePair data) {;}
-    public string Get()
+
+    public void Remove(string key)
     {
-        string data = "";
-        return data;
+        var curElement = first;
+        Node previous = null;
+        while (curElement != null && curElement.Data.Key != key)
+        {
+            previous = curElement;
+            curElement = curElement.Next;
+        }
+
+        if (curElement != null)
+        {
+            if (curElement == first)
+            {
+                first = curElement.Next;
+            }
+            else
+            {
+                previous.Next = curElement.Next;
+            }
+        }
+    }
+    public string Get(string key)
+    {
+        var curElement = first;
+        while (curElement.Data.Key != key)
+        {
+            curElement = curElement.Next;
+        }
+
+        return curElement.Data.Value;
     }
 
     public void Print()
@@ -82,13 +109,14 @@ public class StringsDictionary
 
     public void Remove(string key)
     {
-        ;
+        var hash = CalculateHash(key);
+        _buckets[hash].Remove(key);
     }
 
     public string Get(string key)
     {
         var hash = CalculateHash(key);
-        var value =_buckets[hash].Get();
+        var value =_buckets[hash].Get(key);
         return value;
     }
 
