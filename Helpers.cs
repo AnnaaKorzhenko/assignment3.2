@@ -24,7 +24,6 @@ class Node {
 class LinkedList 
 {
     private Node first = null;
-
     public Node GetFirst()
     {
         return first;
@@ -105,8 +104,8 @@ public class StringsDictionary
     private const int InitialSize = 10;
     private const float LoadFactor = 0.75f;
     private LinkedList[] _buckets = new LinkedList[InitialSize];
-    private int _count = 0;
     private int CurrentSize = InitialSize;
+    private int _count = 0;
 
     public StringsDictionary()
     {
@@ -123,10 +122,14 @@ public class StringsDictionary
         if (_buckets[hash] == null)
         {
             _buckets[hash] = new LinkedList();
+            _buckets[hash].Add(pair);
+            _count++;
         }
-
-        _buckets[hash].Add(pair);
-        _count++;
+        else
+        {
+            _buckets[hash].Add(pair);
+        }
+        
 
         var bucketsfullness = (float)_count / CurrentSize;
 
@@ -194,7 +197,6 @@ public class StringsDictionary
                     {
                         newBuckets[newHash] = new LinkedList();
                     }
-
                     newBuckets[newHash].Add(curElement.Data);
                     curElement = curElement.Next;
                     newCount++;
