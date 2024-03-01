@@ -164,7 +164,7 @@ public class StringsDictionary
         var hash = 0;
         foreach (var c in key)
         {
-            hash += c;
+            hash = hash * c + c;
         }
 
         return hash % CurrentSize;

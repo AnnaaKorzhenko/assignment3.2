@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\angel\\RiderProjects\\assignment3.2\\Assignment3.2.csproj": {}
+    "C:\\!uni\\algorithms\\projects\\Assignment3.2\\Assignment3.2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\angel\\RiderProjects\\assignment3.2\\Assignment3.2.csproj": {
+    "C:\\!uni\\algorithms\\projects\\Assignment3.2\\Assignment3.2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\angel\\RiderProjects\\assignment3.2\\Assignment3.2.csproj",
+        "projectUniqueName": "C:\\!uni\\algorithms\\projects\\Assignment3.2\\Assignment3.2.csproj",
         "projectName": "Assignment3.2",
-        "projectPath": "C:\\Users\\angel\\RiderProjects\\assignment3.2\\Assignment3.2.csproj",
-        "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\angel\\RiderProjects\\assignment3.2\\obj\\",
+        "projectPath": "C:\\!uni\\algorithms\\projects\\Assignment3.2\\Assignment3.2.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\!uni\\algorithms\\projects\\Assignment3.2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\angel\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\DELL\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
